@@ -40,7 +40,7 @@ const config: HardhatUserConfig = {
   },
   mocha: {
     reporter: "mocha-junit-reporter",
-  }
+  },
 };
 
 export default config;
