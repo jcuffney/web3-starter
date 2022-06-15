@@ -4,6 +4,7 @@
   "description": "template for web3 projects",
   "main": "index.js",
   "scripts": {
+    "init:hard": "rm -rf package-lock.json node_modules && npm i",
     "test": "hardhat test",
     "compile": "hardhat compile",
     "clean": "hardhat clean",

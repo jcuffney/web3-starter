@@ -2,6 +2,34 @@
 
 [![CircleCI](https://circleci.com/gh/jcuffney/web3-starter/tree/main.svg?style=svg&circle-token=b49df32603ff032d1cb39c10b8e836edce1bed57)](https://circleci.com/gh/jcuffney/web3-starter/tree/main)
 
+## Description
+
+This is intended to be used for developing smart contracts on the ethereum blockchain. 
+
+## Requirements
+
+- nodejs / npm
+
+## Getting Started
+
+1. `npm install`
+
+## Commands
+
+## Commands
+
+`$ npm run <command>`
+
+| command                     | description   |
+|-----------------------------|---------------|
+| `init:hard`                 | `init` with a fresh package-lock |
+| `clean`                     | clear the ./cache folder |
+| `compile`                   | start development server |
+| `test`                      | run tests in watch mode |
+| `cover`                     | test coverage checks |
+| `lint`                      | lints src code |
+| `lint:fix`                  | lints src code and fixes errors |
+
 ---
 
 # Advanced Sample Hardhat Project
