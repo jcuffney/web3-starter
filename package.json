@@ -10,7 +10,8 @@
     "clean": "hardhat clean",
     "cover": "hardhat coverage",
     "lint": "eslint '**/*.{js,ts}' && solhint 'contracts/**/*.sol'",
-    "lint:fix": "eslint '**/*.{js,ts}' --fix && solhint 'contracts/**/*.sol' --fix"
+    "lint:fix": "eslint '**/*.{js,ts}' --fix && solhint 'contracts/**/*.sol' --fix",
+    "node": "hardhat node"
   },
   "repository": {
     "type": "git",
