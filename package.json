@@ -4,6 +4,7 @@
   "description": "Automate your financial plan",
   "main": "index.js",
   "scripts": {
+    "test": "hardhat test",
     "compile": "hardhat compile"
   },
   "repository": {

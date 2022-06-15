@@ -19,14 +19,29 @@ jobs:
       - store_artifacts:
             path: artifacts
 
+  test:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run: npm test
+
 workflows:
   primary:
     jobs:
       - install
+      - test:
+          requires:
+            - install
       - compile:
           requires:
             - install
-          filters:
-            branches:
-              only:
-                - main
+      # - deploy:
+      #     requires:
+      #       - install
+      #       - test
+      #       - compile
+      #     filters:
+      #       branches:
+      #         only:
+      #           - main
