@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - run: npm test
+      - run: npm run cover
 
 workflows:
   primary:
