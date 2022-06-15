@@ -8,8 +8,8 @@
     "compile": "hardhat compile",
     "clean": "hardhat clean",
     "cover": "hardhat coverage",
-    "lint": "npx eslint '**/*.{js,ts}'",
-    "lint:fix": "npx eslint '**/*.{js,ts}' --fix"
+    "lint": "eslint '**/*.{js,ts}' && solhint 'contracts/**/*.sol'",
+    "lint:fix": "eslint '**/*.{js,ts}' --fix && solhint 'contracts/**/*.sol' --fix"
   },
   "repository": {
     "type": "git",
