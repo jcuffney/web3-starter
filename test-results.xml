@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.5740" tests="1" failures="0">
-  <testsuite name="Root Suite" timestamp="2022-06-15T01:30:37" tests="0" time="0.0000" failures="0">
-  </testsuite>
-  <testsuite name="Greeter" timestamp="2022-06-15T01:30:37" tests="1" file="/Users/jcuffney/Projects/router-protocol/test/index.ts" time="0.5730" failures="0">
-    <testcase name="Greeter Should return the new greeting once it&apos;s changed" time="0.5720" classname="Should return the new greeting once it&apos;s changed">
-    </testcase>
-  </testsuite>
-</testsuites>
