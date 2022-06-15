@@ -21,10 +21,10 @@ workflows:
   primary:
     jobs:
       - install
-      - compile
-        requires:
-          - install
-        filters:
-          branches:
-            only:
-              - main
+      - compile:
+          requires:
+            - install
+          filters:
+            branches:
+              only:
+                - main
