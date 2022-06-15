@@ -1,0 +1,22 @@
+{
+  "name": "router-protocol",
+  "version": "1.0.0",
+  "description": "Automate your financial plan",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcuffney/router-protocol.git"
+  },
+  "author": "Joe Cuffney <josephcuffney@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jcuffney/router-protocol/issues"
+  },
+  "homepage": "https://github.com/jcuffney/router-protocol#readme",
+  "devDependencies": {
+    "hardhat": "^2.9.9"
+  }
+}
