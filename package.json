@@ -1,7 +1,7 @@
 {
-  "name": "router-protocol",
+  "name": "web3-starter",
   "version": "1.0.0",
-  "description": "Automate your financial plan",
+  "description": "template for web3 projects",
   "main": "index.js",
   "scripts": {
     "test": "hardhat test",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jcuffney/router-protocol.git"
+    "url": "git+https://github.com/jcuffney/web3-starter.git"
   },
   "author": "Joe Cuffney <josephcuffney@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jcuffney/router-protocol/issues"
+    "url": "https://github.com/jcuffney/web3-starter/issues"
   },
-  "homepage": "https://github.com/jcuffney/router-protocol#readme",
+  "homepage": "https://github.com/jcuffney/web3-starter#readme",
   "devDependencies": {
     "@nomiclabs/hardhat-ethers": "^2.0.6",
     "@nomiclabs/hardhat-etherscan": "^3.1.0",

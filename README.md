@@ -1,7 +1,6 @@
-# router-protocol
-Ditch your Financial Advisor. Automatically route your funds based on your plan.  
+# web3-starter
 
-[![CircleCI](https://circleci.com/gh/jcuffney/router-protocol/tree/main.svg?style=svg&circle-token=b49df32603ff032d1cb39c10b8e836edce1bed57)](https://circleci.com/gh/jcuffney/router-protocol/tree/main)
+[![CircleCI](https://circleci.com/gh/jcuffney/web3-starter/tree/main.svg?style=svg&circle-token=b49df32603ff032d1cb39c10b8e836edce1bed57)](https://circleci.com/gh/jcuffney/web3-starter/tree/main)
 
 ---
 
