@@ -10,7 +10,21 @@ jobs:
       - checkout
       - node/install-packages
 
+  compile:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - npm run compile
+
 workflows:
   primary:
     jobs:
       - install
+      - compile
+        requires:
+          - install
+        filters:
+          branches:
+            only:
+              - main
