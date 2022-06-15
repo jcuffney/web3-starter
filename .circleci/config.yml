@@ -16,6 +16,8 @@ jobs:
       - checkout
       - node/install-packages
       - run: npm run compile
+      - store_artifacts:
+            path: artifacts
 
 workflows:
   primary:
