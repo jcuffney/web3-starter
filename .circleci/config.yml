@@ -10,11 +10,29 @@ jobs:
       - checkout
       - node/install-packages
 
+  secrets:
+    executor: node/default
+    steps:
+      - checkout
+      # - aws-cli/setup
+      # - jq/install
+      - run: |
+          echo "TESTING=SECRETS"
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - .env 
+      - store_artifacts:
+            path: .env
+
   compile:
     executor: node/default
     steps:
       - checkout
       - node/install-packages
+      # get .env from secrets job.
+      - attach_workspace:
+          at: /home/circleci/project
       - run: npm run compile
       - store_artifacts:
             path: artifacts
@@ -35,27 +53,44 @@ jobs:
       - node/install-packages
       - run: npm run lint
 
+  deploy:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      # get .env from secrets job.
+      # get artifacts from compile job
+      - attach_workspace:
+          at: /home/circleci/project
+      - run: |
+          echo "deploying..."
+          ls -la
 
 workflows:
   primary:
     jobs:
       - install
-      - test:
+      - secrets:
           requires:
             - install
-      - compile:
+      - test:
           requires:
             - install
       - lint:
           requires:
             - install
-      # - deploy:
-      #     requires:
-      #       - install
-      #       - test
-      #       - compile
-      #       - lint
-      #     filters:
-      #       branches:
-      #         only:
-      #           - main
+      - compile:
+          requires:
+            - install
+            - secrets
+      - deploy:
+          requires:
+            - install
+            - secrets
+            - test
+            - lint
+            - compile
+          filters:
+            branches:
+              only:
+                - main
