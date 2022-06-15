@@ -28,6 +28,14 @@ jobs:
       - store_test_results:
           path: coverage
 
+  lint:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages
+      - run: npm run lint
+
+
 workflows:
   primary:
     jobs:
@@ -38,11 +46,15 @@ workflows:
       - compile:
           requires:
             - install
+      - lint:
+          requires:
+            - install
       # - deploy:
       #     requires:
       #       - install
       #       - test
       #       - compile
+      #       - lint
       #     filters:
       #       branches:
       #         only:

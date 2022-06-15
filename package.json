@@ -7,7 +7,9 @@
     "test": "hardhat test",
     "compile": "hardhat compile",
     "clean": "hardhat clean",
-    "cover": "hardhat coverage"
+    "cover": "hardhat coverage",
+    "lint": "npx eslint '**/*.{js,ts}'",
+    "lint:fix": "npx eslint '**/*.{js,ts}' --fix"
   },
   "repository": {
     "type": "git",
