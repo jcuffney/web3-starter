@@ -16,16 +16,14 @@ This is intended to be used for developing smart contracts on the ethereum block
 
 ## Commands
 
-## Commands
-
 `$ npm run <command>`
 
 | command                     | description   |
 |-----------------------------|---------------|
 | `init:hard`                 | `init` with a fresh package-lock |
-| `clean`                     | clear the ./cache folder |
-| `compile`                   | start development server |
 | `test`                      | run tests in watch mode |
+| `compile`                   | start development server |
+| `clean`                     | clear the ./cache folder |
 | `cover`                     | test coverage checks |
 | `lint`                      | lints src code |
 | `lint:fix`                  | lints src code and fixes errors |
