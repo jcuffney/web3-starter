@@ -15,7 +15,7 @@ jobs:
     steps:
       - checkout
       - node/install-packages
-      - npm run compile
+      - run: npm run compile
 
 workflows:
   primary:
