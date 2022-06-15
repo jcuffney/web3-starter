@@ -14,14 +14,13 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      # - aws-cli/setup
-      # - jq/install
       - run: |
+          # TODO: use CIRCLECI context to store secrets and pipe them into `.env` file
           echo "TESTING=SECRETS" >> .env
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
-            - .env 
+            - .env
       - store_artifacts:
             path: .env
 
@@ -34,9 +33,12 @@ jobs:
       - attach_workspace:
           at: /home/circleci/project
       - run: npm run compile
+      - persist_to_workspace:
+          root: /home/circleci/project
+          paths:
+            - artifacts
       - store_artifacts:
             path: artifacts
-
   test:
     executor: node/default
     steps:
