@@ -39,7 +39,7 @@ const config: HardhatUserConfig = {
     apiKey: process.env.ETHERSCAN_API_KEY,
   },
   mocha: {
-    reporter: "mocha-junit-reporter",
+    reporter: "junit-reporter",
   },
 };
 
