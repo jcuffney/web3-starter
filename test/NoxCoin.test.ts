@@ -2,6 +2,15 @@ import { expect } from "chai";
 import { Signer } from "ethers";
 import { ethers } from "hardhat";
 
+/**
+ * FIXME:
+ *
+ * Error in plugin solidity-coverage: TSError: ⨯ Unable to compile TypeScript:
+ *
+ * test/NoxCoin.test.ts:6:43 - error TS2307: Cannot find module '../typechain' or its corresponding type declarations.
+ *
+ * 6 import { NoxCoin, NoxCoin__factory } from "../typechain";
+ */
 // eslint-disable-next-line camelcase,node/no-missing-import
 import { NoxCoin, NoxCoin__factory } from "../typechain";
 

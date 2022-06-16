@@ -17,6 +17,7 @@ jobs:
       - run: |
           # TODO: use CIRCLECI context to store secrets and pipe them into `.env` file
           echo "TESTING=SECRETS" >> .env
+          echo "ETHERSCAN_API_KEY=$ETHERSCAN_API_KEY" >> .env
       - persist_to_workspace:
           root: /home/circleci/project
           paths:
@@ -73,6 +74,7 @@ workflows:
     jobs:
       - install
       - secrets:
+          context: web3
           requires:
             - install
       - test:

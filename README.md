@@ -29,6 +29,17 @@ This is intended to be used for developing smart contracts on the ethereum block
 | `lint:fix`                  | lints src code and fixes errors |
 | `node`                      | starts a local ethereum node via hardhat |
 
+## Deployment to local node
+
+1. start a local node `npm run node`
+2. in a different terminal run the appropriate deployment script
+
+`npx hardhat run --network localhost scripts/002_deploy-noxcoin.ts`
+
+## Deployment to testnet
+
+`npx hardhat run --network goerli scripts/002_deploy-noxcoin.ts`
+
 ## Documentation
 
 - [hardhat](https://hardhat.org)
