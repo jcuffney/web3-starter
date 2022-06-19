@@ -41,20 +41,20 @@ jobs:
       - store_artifacts:
             path: artifacts
 
-  test:
-    executor: node/default
+  # test:
+  #   executor: node/default
 
-    steps:
-      - checkout
-      - node/install-packages    
-      # get .env from secrets job.
-      - attach_workspace:
-          at: /home/circleci/project
-      # TODO: get coverage error fixed
-      # - run: npm run cover
-      - run: npm run test
-      # - store_test_results:
-      #     path: coverage
+  #   steps:
+  #     - checkout
+  #     - node/install-packages    
+  #     # get .env from secrets job.
+  #     - attach_workspace:
+  #         at: /home/circleci/project
+  #     # TODO: get coverage error fixed
+  #     # - run: npm run cover
+  #     - run: npm run test
+  #     # - store_test_results:
+  #     #     path: coverage
 
   lint:
     executor: node/default
@@ -84,9 +84,9 @@ workflows:
           context: web3
           requires:
             - install
-      - test:
-          requires:
-            - install
+      # - test:
+      #     requires:
+      #       - install
       - lint:
           requires:
             - install
@@ -98,7 +98,7 @@ workflows:
           requires:
             - install
             - secrets
-            - test
+            # - test
             - lint
             - compile
           filters:
