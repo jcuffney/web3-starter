@@ -38,7 +38,11 @@ This is intended to be used for developing smart contracts on the ethereum block
 
 ## Deployment to testnet
 
+#### Contract Creation
 `npx hardhat run --network goerli scripts/002_deploy-noxcoin.ts`
+
+#### Contract Verification
+`npx hardhat verify --contract contracts/<file_name>.sol:<contract_to_verify> <contract_address> --network goerli`
 
 ## Documentation
 
