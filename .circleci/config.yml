@@ -40,11 +40,16 @@ jobs:
             - artifacts
       - store_artifacts:
             path: artifacts
+
   test:
     executor: node/default
+
     steps:
       - checkout
-      - node/install-packages
+      - node/install-packages    
+      # get .env from secrets job.
+      - attach_workspace:
+          at: /home/circleci/project
       - run: npm run cover
       - store_test_results:
           path: coverage
